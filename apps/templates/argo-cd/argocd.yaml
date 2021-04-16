@@ -11,7 +11,7 @@ spec:
     namespace: {{ .Values.global.argo.namespace }}
   project: default
   source:
-    path: argo/argo-helm/
+    path: argo-helm/
     repoURL: {{ .Values.global.spec.repoURL }}
     targetRevision: {{ .Values.global.spec.targetRevision }}
   syncPolicy:
