@@ -8,3 +8,5 @@ global:
     source:
       repoURL: git@github.com:iamcaleberic/argo.git
       targetRevision: HEAD
+test: 
+  name: ok
