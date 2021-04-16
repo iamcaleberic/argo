@@ -1,6 +1,6 @@
 global: 
   argo: 
-    namespace: argocd2
+    namespace: argocd
     project: argocd
   spec:
     destination:
