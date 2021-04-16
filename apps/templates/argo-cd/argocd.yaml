@@ -12,8 +12,8 @@ spec:
   project: default
   source:
     path: argo-helm/
-    repoURL: {{ .Values.global.spec.repoURL }}
-    targetRevision: {{ .Values.global.spec.targetRevision }}
+    repoURL: {{ .Values.global.spec.source.repoURL }}
+    targetRevision: {{ .Values.global.spec.source.targetRevision }}
   syncPolicy:
     automated:
       prune: true
