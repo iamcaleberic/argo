@@ -1,0 +1,10 @@
+global: 
+  argo: 
+    namespace: argocd
+    project: argocd
+  spec:
+    destination:
+      server: https://kubernetes.default.svc
+    source:
+      repoURL: git@github.com:cricut/gitops.config.git
+      targetRevision: argocd

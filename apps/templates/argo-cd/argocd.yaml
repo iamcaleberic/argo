@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: {{ .Values.global.argo.namespace }}
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: {{ .Values.global.spec.destination.server }}
+    namespace: {{ .Values.global.argo.namespace }}
+  project: default
+  source:
+    path: argo/argo-helm/
+    repoURL: {{ .Values.global.spec.repoURL }}
+    targetRevision: {{ .Values.global.spec.targetRevision }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
