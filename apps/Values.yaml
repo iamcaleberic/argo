@@ -7,4 +7,4 @@ global:
       server: https://kubernetes.default.svc
     source:
       repoURL: git@github.com:iamcaleberic/argo.git
-      targetRevision: argocd
+      targetRevision: HEAD
