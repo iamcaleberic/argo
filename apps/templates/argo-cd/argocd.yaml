@@ -9,7 +9,7 @@ spec:
   destination:
     server: {{ .Values.global.spec.destination.server }}
     namespace: {{ .Values.global.argo.namespace }}
-  project: default
+  project:  {{ .Values.global.argo.project }}
   source:
     path: argo-helm/
     repoURL: {{ .Values.global.spec.source.repoURL }}
