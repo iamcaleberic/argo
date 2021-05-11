@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx
-  namespace: {{ .Values.nginx.namespace }}
+  namespace: {{ .Values.global.argo.namespace }}
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: {{ .Values.global.spec.destination.server }}
-    namespace: {{ .Values.global.argo.namespace }}
+    namespace: {{ .Values.nginx.namespace }}
   project:  {{ .Values.nginx.project }}
   source:
     path: nginx/
