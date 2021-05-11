@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: {{ .Values.nginx.namespace }}
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: {{ .Values.global.spec.destination.server }}
+    namespace: {{ .Values.global.argo.namespace }}
+  project:  {{ .Values.nginx.project }}
+  source:
+    path: nginx/
+    repoURL: {{ .Values.global.spec.source.repoURL }}
+    targetRevision: {{ .Values.global.spec.source.targetRevision }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
