@@ -8,3 +8,8 @@ global:
     source:
       repoURL: git@github.com:iamcaleberic/argo.git
       targetRevision: HEAD
+
+nginx:
+  name: nginx
+  namespace: nginx
+  project: nginx
