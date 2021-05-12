@@ -11,6 +11,10 @@ spec:
     namespace: {{ .Values.global.argo.namespace }}
   project:  {{ .Values.global.argo.project }}
   source:
+    helm:
+      valueFiles:
+        - values.yaml
+        - values-alt.yaml
     path: argo-helm/
     repoURL: {{ .Values.global.spec.source.repoURL }}
     targetRevision: {{ .Values.global.spec.source.targetRevision }}
