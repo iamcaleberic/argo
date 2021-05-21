@@ -13,3 +13,8 @@ nginx:
   name: nginx
   namespace: nginx
   project: nginx
+
+metricsServer:
+  name: metrics-server
+  namespace: metrics-server
+  project: metrics-server

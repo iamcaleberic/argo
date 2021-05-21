@@ -1,0 +1,7 @@
+name: metrics-server
+application:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    path: metrics-server
+    targetRevision: HEAD

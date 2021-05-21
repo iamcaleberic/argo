@@ -39,3 +39,6 @@ argo-cd:
           sshPrivateKeySecret:
             name: secret-ssh-auth
             key: ssh-privatekey
+        - name: metrics-server
+          type: helm
+          url: https://charts.bitnami.com/bitnami
