@@ -5,3 +5,4 @@ application:
   source:
     path: metrics-server
     targetRevision: HEAD
+project: metrics-server
