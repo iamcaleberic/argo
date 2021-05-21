@@ -9,7 +9,7 @@ spec:
   destination:
     server: {{ .Values.application.destination.server }}
     namespace: {{ .Values.application.destination.namespace }}
-  project: {{ .Values.global.project }}
+  project: {{ .Values.project }}
   source:
     path: metrics-server/
     repoURL: {{ .Values.global.spec.source.repoURL }}
