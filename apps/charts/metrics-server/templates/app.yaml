@@ -11,6 +11,10 @@ spec:
     namespace: {{ .Values.application.destination.namespace }}
   project: {{ .Values.project }}
   source:
+    helm:
+      parameters:
+        - name: environment
+          value: "test"
     path: metrics-server/
     repoURL: {{ .Values.global.spec.source.repoURL }}
     targetRevision: {{ .Values.global.spec.source.targetRevision }}
