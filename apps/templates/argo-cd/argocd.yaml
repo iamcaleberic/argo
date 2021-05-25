@@ -15,6 +15,9 @@ spec:
       valueFiles:
         - values.yaml
         - values-alt.yaml
+      parameters:
+        - name: environment
+          value: "test"
     path: argo-helm/
     repoURL: {{ .Values.global.spec.source.repoURL }}
     targetRevision: {{ .Values.global.spec.source.targetRevision }}
