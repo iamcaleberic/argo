@@ -14,7 +14,7 @@ argo-rollouts:
     affinity: {}
     image:
       repository: argoproj/argo-rollouts
-      tag: v0.10.2
+      tag: latest
       pullPolicy: IfNotPresent
 
     resources: {}
