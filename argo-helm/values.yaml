@@ -42,3 +42,6 @@ argo-cd:
         - name: metrics-server
           type: helm
           url: https://charts.bitnami.com/bitnami
+        - type: helm
+          name: argo-rollouts
+          repository: https://argoproj.github.io/argo-helm
