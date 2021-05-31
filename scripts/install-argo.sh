@@ -75,7 +75,7 @@ echo -e "Relese name: $release";
 hashed_password=$(htpasswd -nbBC 10 "" ${password} | tr -d ':\n' | sed 's/$2y/$2a/')
 
 # Initial argocd install with helm
-helm dependency update 
+helm dependency update ../argo-helm
 helm install $release  ../argo-helm -n $namespace  --debug --dry-run 
 
 helm install $release ../argo-helm  -n $namespace --create-namespace
