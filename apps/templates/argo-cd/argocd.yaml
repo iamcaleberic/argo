@@ -18,7 +18,7 @@ spec:
       parameters:
         - name: environment
           value: "test"
-    path: argo-helm/
+    path: argo-cd/
     repoURL: {{ .Values.global.spec.source.repoURL }}
     targetRevision: {{ .Values.global.spec.source.targetRevision }}
   syncPolicy:
