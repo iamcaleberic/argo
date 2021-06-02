@@ -483,13 +483,13 @@ argo-cd:
       #     - all
       # readOnlyRootFilesystem: true
 
-    resources: {}
-    #  limits:
-    #    cpu: 100m
-    #    memory: 128Mi
-    #  requests:
-    #    cpu: 50m
-    #    memory: 64Mi
+    resources: 
+      limits:
+        cpu: 100m
+        memory: 128Mi
+      requests:
+        cpu: 50m
+        memory: 64Mi
 
     ## Certificate configuration
     certificate:
@@ -864,13 +864,13 @@ argo-cd:
       #     - all
       # readOnlyRootFilesystem: true
 
-    resources: {}
-    #  limits:
-    #    cpu: 50m
-    #    memory: 128Mi
-    #  requests:
-    #    cpu: 10m
-    #    memory: 64Mi
+    resources: 
+     limits:
+       cpu: 50m
+       memory: 128Mi
+     requests:
+       cpu: 10m
+       memory: 64Mi
 
     ## Repo server service configuration
     service:
