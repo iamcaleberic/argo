@@ -287,13 +287,14 @@ argo-cd:
       #     - all
       # readOnlyRootFilesystem: true
 
-    resources: {}
-    #  limits:
-    #    cpu: 50m
-    #    memory: 64Mi
-    #  requests:
-    #    cpu: 10m
-    #    memory: 32Mi
+    resources: 
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 250m
+        memory: 256Mi
+      
 
   ## Redis
   redis:
@@ -868,12 +869,12 @@ argo-cd:
       # readOnlyRootFilesystem: true
 
     resources: 
-     limits:
-       cpu: 500m
-       memory: 512Mi
-     requests:
-       cpu: 250m
-       memory: 256Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 250m
+        memory: 256Mi
 
     ## Repo server service configuration
     service:
