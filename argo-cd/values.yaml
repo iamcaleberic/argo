@@ -1016,13 +1016,14 @@ argo-cd:
       #     jzvt1hxpxVDmXvRnkhRrIRhK4QgJL0jRmirBjDY+PYYd7bdRIjN7WNZLFsgplnS8
       #     9w6CwG32pRlm0c8kkiQ7FXA6BYCqOsDI8f1VGQv331OpR2Ck+FTv+L7DAmg6l37W
       #     +LB9LGh4OAp68ImTjqf6ioGKG0RBSznwME+r4nXtT1S/qLR6ASWUS4ViWRhbRlNK
-      #     XWyb96wrUlv+E8I=    resources: 
-     limits:
-       cpu: 500m
-       memory: 512Mi
-     requests:
-       cpu: 250m
-       memory: 256Mi
+      #     XWyb96wrUlv+E8I=    
+    resources: 
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 250m
+        memory: 256Mi
 
     # Creates a secret with optional repository credentials
     repositoryCredentials:
