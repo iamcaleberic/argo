@@ -76,18 +76,19 @@ hashed_password=$(htpasswd -nbBC 10 "" ${password} | tr -d ':\n' | sed 's/$2y/$2
 
 # Initial argocd install with helm
 helm dependency update ../argo-cd
-helm install $release  ../argo-cd -n $namespace  --debug --dry-run 
+helm template "ar" ../argo-cd -n $namespace  --debug --dry-run --include-crds 
 
-helm install $release ../argo-cd  -n $namespace --create-namespace
+kubectl create ns $namespace
+helm template "ar" ../argo-cd  -n $namespace --create-namespace --include-crds | kubectl apply -n $namespace -f -
 
 # Add apps and projects (incl. argocd)
 helm template ../apps/ | kubectl apply -n $namespace -f -
 
-# https://github.com/helm/helm/issues/8127d
-# delete release while keeping the resources 
-# to allow argocd to manage itself
-kubectl get secret -n $namespace -l owner=helm,name=$release 
-kubectl delete secret -n $namespace  -l owner=helm,name=$release
+# # https://github.com/helm/helm/issues/8127d
+# # delete release while keeping the resources 
+# # to allow argocd to manage itself
+# kubectl get secret -n $namespace -l owner=helm,name=$release 
+# kubectl delete secret -n $namespace  -l owner=helm,name=$release
 
 #  alternative to change default argo password
 # https://github.com/argoproj/argo-helm/issues/347

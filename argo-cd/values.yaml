@@ -629,10 +629,10 @@ argo-cd:
           url: https://charts.bitnami.com/bitnami
         - type: helm
           name: argo-rollouts
-          repository: https://argoproj.github.io/argo-helm
+          url: https://argoproj.github.io/argo-helm
         - type: helm
           name: kube-prometheus-stack
-          repository: https://prometheus-community.github.io/helm-charts
+          url: https://prometheus-community.github.io/helm-charts
       # oidc.config: |
       #   name: AzureAD
       #   issuer: https://login.microsoftonline.com/TENANT_ID/v2.0

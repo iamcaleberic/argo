@@ -1,5 +1,5 @@
 argo-rollouts:
-  installCRDs: true
+  installCRDs: false
 
   clusterInstall: true
 
