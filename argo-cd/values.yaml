@@ -127,13 +127,13 @@ argo-cd:
     affinity: {}
 
     priorityClassName: ""
-
+    # https://github.com/argoproj/argo-cd/issues/4013
     resources: 
       limits:
-        cpu: 1
-        memory: 1Gi
+        cpu: 2
+        memory: 2Gi
       requests:
-        cpu: 500m
+        cpu: 1
         memory: 500Mi
 
     serviceAccount:
