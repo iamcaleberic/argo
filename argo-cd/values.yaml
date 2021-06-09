@@ -637,7 +637,7 @@ argo-cd:
           name: flagger
           url: https://flagger.app
         - type: helm
-          name: rust-playgorund
+          name: rq
           url: 	https://containersolutions.github.io/rust-playground
       # oidc.config: |
       #   name: AzureAD
