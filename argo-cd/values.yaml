@@ -636,6 +636,9 @@ argo-cd:
         - type: helm
           name: flagger
           url: https://flagger.app
+        - type: helm
+          name: rust-playgorund
+          url: 	https://containersolutions.github.io/rust-playground
       # oidc.config: |
       #   name: AzureAD
       #   issuer: https://login.microsoftonline.com/TENANT_ID/v2.0

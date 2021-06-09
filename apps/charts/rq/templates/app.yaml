@@ -11,8 +11,8 @@ spec:
     namespace: {{ .Values.namespace }}
   project:  {{ .Values.project }}
   source:
-    path: charts/rq
-    repoURL: https://github.com/ContainerSolutions/rust-playground
+    path: rq
+    repoURL: {{ .Values.global.spec.source.repoURL }}
     targetRevision: {{ .Values.global.spec.source.targetRevision }}
   syncPolicy:
     automated:

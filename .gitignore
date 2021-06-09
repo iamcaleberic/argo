@@ -1,4 +1,5 @@
-argo-helm/charts/
+argo-cd/charts
 argo-rollouts/charts/
 prometheus/charts/
 flagger/charts
+rq/charts
