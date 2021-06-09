@@ -633,6 +633,9 @@ argo-cd:
         - type: helm
           name: kube-prometheus-stack
           url: https://prometheus-community.github.io/helm-charts
+        - type: helm
+          name: flagger
+          url: https://flagger.app
       # oidc.config: |
       #   name: AzureAD
       #   issuer: https://login.microsoftonline.com/TENANT_ID/v2.0
