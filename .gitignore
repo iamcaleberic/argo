@@ -1,3 +1,4 @@
 argo-helm/charts/
 argo-rollouts/charts/
 prometheus/charts/
+flagger/charts
