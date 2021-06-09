@@ -1,6 +1,6 @@
 dependencies:
 - name: rq
   repository: https://containersolutions.github.io/rust-playground
-  version: 0.4.0
-digest: sha256:0b917d2ac508d4b63996ab6f0dd37342a0758d5f795c4fc26e110ed788e71fd3
-generated: "2021-06-09T14:34:44.360917859+02:00"
+  version: 0.4.1
+digest: sha256:11d00dd1d68d7ef27a60a430c4c7a55f9fb806222134c42acc3e01a2b2ae5bfb
+generated: "2021-06-09T15:23:10.331079224+02:00"
